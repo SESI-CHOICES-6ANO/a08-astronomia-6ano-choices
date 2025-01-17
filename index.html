@@ -1,0 +1,986 @@
+<!DOCTYPE html>
+<html lang="PT-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <!--Let browser know website is optimized for mobile-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Como tudo começou?" />
+    <meta name="author" content="SESI" />
+    <title>Aula 08 | Que padrão é esse que se repete?</title>
+    <link rel="icon" type="image/png" href="src/img/core/Favicon.png" />
+
+    <!-- Fonts Gamay Editorial -->
+    <link rel="stylesheet" href="https://use.typekit.net/gfu5jar.css" />
+
+    <!--Import Google Icon Font-->
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&display=swap"
+    />
+
+    <!-- CSS -->
+    <link
+      type="text/css"
+      rel="stylesheet"
+      href="src/css/main.css"
+      media="screen"
+    />
+
+    <!-- Vue DEV MODE -->
+    <!-- <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script> -->
+
+    <!-- Vue PROD MODE -->
+    <script
+      rel="preconnect"
+      src="https://unpkg.com/vue@3/dist/vue.global.prod.js"
+    ></script>
+
+    <!-- Scorm JS -->
+    <script src="src/js/scorm/APIWrapper.js" defer></script>
+    <script src="src/js/scorm/SCOFunctions.js" defer></script>
+    <script src="src/js/scorm/scorm-app.js" defer></script>
+
+    <link rel="preload" href="src/img/Hero-m.webp" as="image" />
+    <link rel="preload" href="src/img/Hero-s.webp" as="image" />
+
+    <!-- Materialize JS -->
+    <script
+      type="text/javascript"
+      src="src/js/materialize/materialize.js"
+      defer
+    ></script>
+    <!-- AOS JS -->
+    <script
+      type="text/javascript"
+      src="src/js/aos-master/aos.js"
+      defer
+    ></script>
+
+    <!-- click show/hidden  -->
+    <script>
+      // function myFunction() {
+      //   var x = document.getElementById("explication-one");
+      //   if (x.style.display === "none") {
+      //     x.style.display = "block";
+      //   } else {
+      //     x.style.display = "none";
+      //   }
+      // }
+    </script>
+
+    <!-- JS Animation GSAP -->
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"
+      defer
+    ></script>
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"
+      defer
+    ></script>
+
+    <!-- App.js JS customizado aqui -->
+    <script type="module" src="src/js/app.js"></script>
+
+    <!-- AOS Animation -->
+    <link type="text/css" rel="stylesheet" href="src/css/aos.css" />
+  </head>
+  <body>
+    <div id="app">
+      <!-- loading ---------------------------------- -->
+      <div id="loading">
+        <div class="spinner"></div>
+      </div>
+      <div id="content">
+        <!-- Sidebar ---------------------------------- -->
+        <sidebar></sidebar>
+
+        <!-- Navbar ---------------------------------- -->
+        <navbar></navbar>
+
+        <!-- Hero Banner ----------------------------------->
+        <hero>Que padrão é esse que se repete?</hero>
+
+        <!-- Primeiro Conteúdo ----------------------------->
+        <div id="inicio" class="top-rounded pt-80 pb-60">
+          <div class="container--medium center-align">
+            <h2 class="mb-40 purple-text center-align" data-aos="zoom-in">
+              👉 Nesta aula
+            </h2>
+            <p class="body1">
+              <b>Vamos conversar sobre leis de Kepler.</b>
+            </p>
+            <p>
+              Na nossa última aventura, entendemos o motivo pelo qual a
+              humanidade passou tanto tempo acreditando que a Terra era o centro
+              do Universo. Nesta, vamos entender como essa história mudou.<br />&nbsp;
+            </p>
+          </div>
+        </div>
+        <!-- Fim Primeiro Conteúdo ------------------------->
+
+        <!-- Introdução ------------------------------------>
+        <div id="intro" class="game-story game-story--scene03">
+          <div id="game-content-02" class="container game-content">
+            <!-- linha 01 -->
+            <div class="row pt-288 pt-80-mobile">
+              <div class="col m3 s3">
+                <img
+                  class="character-flip"
+                  src="src/img/girl-posing3.webp"
+                  alt="Diana"
+                  loading="lazy"
+                  style="max-width: 260px !important"
+                />
+              </div>
+              <div class="col m6 s6">
+                <div
+                  class="box-attention box-attention--green box-attention--bl py-16 mr-80 mt-60 mt-0-mobile mr-0-mobile"
+                >
+                  <p>
+                    Luki, estive pensando: como que as pessoas deixaram de
+                    acreditar que a Terra era o centro do Universo?
+                  </p>
+                </div>
+                <div
+                  class="box-attention box-attention--orange-strong box-attention--tr py-16 ml-80 mt-40 mt-20-mobile ml-0-mobile"
+                  style="margin-left: 20%"
+                >
+                  <p>
+                    Pois é! Se Ptolomeu conseguiu explicar o movimento
+                    retrógrado, como eles mudaram de ideia?
+                  </p>
+                </div>
+              </div>
+              <div class="col m3 s3">
+                <img
+                  class="character"
+                  src="src/img/boy-confirm.webp"
+                  alt="Luki"
+                  loading="lazy"
+                />
+              </div>
+            </div>
+            <!-- fim linha 01 -->
+
+            <!-- linha 02 -->
+            <div class="row mt-60">
+              <div class="col m2 s2"></div>
+              <div class="col m6 s6">
+                <div
+                  class="box-attention box-attention--purple-strong box-attention--br py-16 mr-80 mt-60 mt-0-mobile mr-0-mobile"
+                >
+                  <p>
+                    Na verdade, não foi tão simples assim! O debate a respeito
+                    do modelo geocêntrico e heliocêntrico perdurou por anos, e a
+                    matemática foi essencial para resolver essa questão!
+                  </p>
+                </div>
+              </div>
+              <div class="col m3 s3">
+                <img
+                  class="character"
+                  src="src/img/doctor-happy.webp"
+                  alt="Doutor"
+                  loading="lazy"
+                  style="max-width: 200px !important"
+                />
+              </div>
+              <div class="col m1 s1"></div>
+            </div>
+            <!-- fim da linha 02 -->
+
+            <!-- linha 03 -->
+            <div class="row mt-60">
+              <div class="col m3 s3 mt-80 mt-0-mobile">
+                <img
+                  class="character-flip"
+                  src="src/img/girl-posing3.webp"
+                  alt="Diana"
+                  loading="lazy"
+                  style="max-width: 260px !important"
+                />
+              </div>
+              <div class="col m5 s5">
+                <div
+                  class="box-attention box-attention--green box-attention--bl py-16 mr-80 mt-60 mt-0-mobile mr-0-mobile"
+                >
+                  <p>Ah, é? Mas como? 😮</p>
+                </div>
+                <div
+                  class="box-attention box-attention--purple-strong box-attention--tr py-16 ml-80 mt-40 mt-20-mobile ml-0-mobile"
+                >
+                  <p>Essa é uma ótima pergunta para uma missão!</p>
+                </div>
+              </div>
+              <div class="col m4 s4">
+                <img
+                  class="character-flip"
+                  src="src/img/doctor-dancing.webp"
+                  alt="Doutor"
+                  loading="lazy"
+                  style="max-width: 300px !important"
+                />
+              </div>
+            </div>
+            <!-- fim da linha 03 -->
+
+            <!-- linha 04 -->
+            <div class="row mt-60 mt-80-mobile">
+              <div class="col m1 s1"></div>
+              <div
+                class="col m3 s3 pt-60 pt-0-mobile mb-60 flex--align-center flex--justify-center"
+              >
+                <img
+                  class="character"
+                  src="src/img/boy-superok.webp"
+                  alt="Luki"
+                  loading="lazy"
+                  style="max-width: 260px !important"
+                />
+              </div>
+              <div class="col m7 s7">
+                <div
+                  class="box-attention box-attention--orange-strong box-attention--bl py-16 mb-60 mt-0-mobile mr-288 mr-0-mobile"
+                >
+                  <p>
+                    Vamos lá, professor! Estamos prontos para nossa missão! 👍
+                  </p>
+                </div>
+              </div>
+              <div class="col m1 s1"></div>
+            </div>
+            <!-- fim da linha 04 -->
+          </div>
+          <img
+            src="src/img/Section-zigzag.svg"
+            style="width: 100%; margin-top: -80px; margin-bottom: -12px"
+            alt="Onda"
+          />
+        </div>
+        <!-- Fim Introução -->
+
+        <!-- Game ------------------------------------------>
+        <div id="missao" class="blue-green-bg">
+          <div class="container py-60">
+            <div class="row">
+              <div class="col m12 s12 center-align">
+                <p class="white-text body1">
+                  <b>Prontos para mais uma missão? 😲</b>
+                </p>
+                <p class="white-text center-align">
+                  <b>
+                    Vamos observar o que Luki recebeu em sua central de
+                    controle!</b
+                  >
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="game-story game-story--scene02" style="line-height: 0">
+          <img
+            src="src/img/Section-zigzag-i.svg"
+            style="width: 100%; margin-top: -8px; z-index: 3"
+            alt="Onda"
+          />
+          <div id="game-content-01" class="container game-content mb-40 pt-40">
+            <!-- row Missao -->
+            <div class="row">
+              <div class="col m12 s12">
+                <div class="center-align mt-24-mobile">
+                  <div class="bullet-reveal col m6 s12">
+                    <!-- Bullet -->
+                    <a
+                      data-aos="fade-up"
+                      class="bullet btn-floating pulse waves-effect waves-light tooltipped"
+                      data-html="true"
+                      data-position="bottom"
+                      data-tooltip-id="bullet-01"
+                      style="left: 50%; top: 65%"
+                    >
+                      <div id="bullet-01" style="display: none">
+                        <p
+                          class="white-text center-align"
+                          style="font-size: 13.5px"
+                        >
+                          Para cumprir esta missão, é necessário:<br />
+                          &bull; Desenvolver uma compreensão básica das três
+                          leis que descrevem o movimento dos planetas ao redor
+                          do Sol.<br />
+                          &bull; Perceber a importância dos dados do
+                          observatório de Tycho Brahe.<br />
+                          &bull; Compreender que os planetas se movem em órbitas
+                          elípticas ao redor do Sol.<br />
+                          &bull; Entender que os planetas se movem mais
+                          rapidamente quando estão mais próximos do Sol e mais
+                          lentamente quando estão mais distantes.<br />
+                          &bull; Relacionar a velocidade do planeta à área que
+                          ele percorre em tempos iguais.<br />
+                          &bull; Compreender a relação entre o período orbital
+                          (tempo que um planeta leva para dar uma volta ao redor
+                          do Sol) e a distância do planeta do Sol.<br />
+                        </p>
+                      </div>
+                    </a>
+                    <!-- fim Bullet -->
+                    <img
+                      data-aos="zoom-in"
+                      class="mission-img"
+                      src="src/img/mission-00.png"
+                      alt="Missão"
+                      loading="lazy"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Fim Missao -->
+
+            <!-- row apenas luki -->
+            <div class="row mt-24-mobile">
+              <div class="col m5 s5"></div>
+              <div class="col m3 s3">
+                <img
+                  class="character"
+                  src="src/img/boy-flying.webp"
+                  alt="Luki"
+                  loading="lazy"
+                />
+              </div>
+              <div class="col m4 s4"></div>
+            </div>
+            <!-- fim apenas luki -->
+
+            <!-- row linha 01 -->
+            <div class="row mt-40 mt-40-mobile">
+              <div class="col m2 s2"></div>
+              <div class="col m6 s6">
+                <div
+                  class="box-attention box-attention--green box-attention--br py-16 mt-60 mt-0-mobile"
+                >
+                  <p>
+                    Professor, analisando nossos dados, notei que tudo começou
+                    com um <span class="purple-text"><b>observatório</b></span
+                    >.
+                  </p>
+                </div>
+              </div>
+              <div class="col m3 s3">
+                <img
+                  class="character"
+                  src="src/img/girl-running02.webp"
+                  alt="Diana"
+                  loading="lazy"
+                />
+              </div>
+              <div class="col m1 s1"></div>
+            </div>
+            <!-- fim linha 01 -->
+
+            <!-- linha 02 -->
+            <div class="row mt-60">
+              <div class="col m4 s4">
+                <img
+                  class="character"
+                  src="src/img/doctor-hunter.webp"
+                  alt="Doutor"
+                  loading="lazy"
+                  style="max-width: 340px !important"
+                />
+              </div>
+              <div class="col m5 s5">
+                <div
+                  class="box-attention box-attention--purple-strong box-attention--bl py-16 mr-80 mr-0-mobile"
+                >
+                  <p>
+                    Está no caminho certo, Diana! Você está falando de
+                    <b>Uraniborg</b>.
+                  </p>
+                </div>
+                <div
+                  class="box-attention box-attention--green box-attention--tr py-16 ml-80 mt-40 mt-20-mobile ml-0-mobile"
+                >
+                  <p>
+                    Sim! Ele era de
+                    <span class="purple-text"><b>Tycho Brahe</b></span
+                    >.
+                  </p>
+                </div>
+                <div class="content-reveal cr-01">
+                  <div
+                    @click="pulseReview('cr-01')"
+                    class="box-attention clicker mt-40 mt-20-mobile flex--align-center flex--justify-center"
+                    style="max-width: 350px; padding: 8px"
+                  >
+                    <img
+                      src="src/img/doctor-avatar.png"
+                      alt="Doutor"
+                      loading="lazy"
+                      class="mr-8"
+                    />
+                    <p class="purple-text" style="font-size: 12px">
+                      <b>Explicação do Dr. Mathias sobre Uraniborg</b>
+                    </p>
+                  </div>
+                  <div class="cr-01 scale-transition scale-out">
+                    <div
+                      class="box-attention mt-24 flex--align-center flex--justify-center"
+                    >
+                      <p class="purple-text">
+                        Uma das mais notáveis e avançadas instalações
+                        astronômicas de seu tempo. Foi construído na ilha de
+                        Hven, na Dinamarca, durante o século XVI, entre os anos
+                        de 1576 e 1596.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col m3 s3 mt-40 mt-0-mobile">
+                <img
+                  class="character"
+                  src="src/img/girl-posing3.webp"
+                  alt="Diana"
+                  loading="lazy"
+                  style="max-width: 240px !important"
+                />
+              </div>
+            </div>
+            <!-- fim da linha 02 -->
+
+            <!-- row linha 03 -->
+            <div id="tycho" class="row mt-60 mt-60-mobile">
+              <div class="col m3 s3">
+                <img
+                  class="character"
+                  src="src/img/cosmobit-running.webp"
+                  alt="Cosmobit"
+                  loading="lazy"
+                  style="max-width: 220px !important"
+                />
+              </div>
+              <div class="col m9 s9">
+                <div
+                  class="box-attention box-attention box-attention--tl py-12 mt-0-mobile"
+                >
+                  <div class="row">
+                    <div
+                      class="col m4 s12 flex--justify-center flex--align-center"
+                    >
+                      <img
+                        src="src/img/tycho.png"
+                        alt="Tycho"
+                        loading="lazy"
+                        class="img--round"
+                      />
+                    </div>
+                    <div
+                      class="col m8 s12 flex--justify-center flex--align-center"
+                    >
+                      <p>
+                        As observações precisas feitas pelo astrônomo Tycho
+                        Brahe no século XVI revolucionaram a astronomia. Na
+                        Dinamarca, seu observatório Uraniborg era uma maravilha
+                        arquitetônica. Coletou dados celestiais detalhados,
+                        desafiando a ideia de que as órbitas são completamente
+                        circulares e fornecendo a Kepler informações
+                        importantes. Seu rigor e perspicácia mudaram a maneira
+                        como as pessoas entendiam as órbitas das estrelas,
+                        abrindo caminho para as Leis de Kepler e revolucionando
+                        nossa compreensão do cosmos.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- fim linha 03 -->
+
+            <!-- row linha 04 -->
+            <div id="uraniborg" class="row mt-80 mt-60-mobile">
+              <div class="col m9 s9">
+                <div
+                  class="box-attention box-attention box-attention--br py-12 mt-0-mobile"
+                >
+                  <div class="row">
+                    <div
+                      class="col m4 s12 flex--justify-center flex--align-center"
+                    >
+                      <img
+                        src="src/img/observatorio.png"
+                        alt="Observatório"
+                        loading="lazy"
+                        class="img--round"
+                      />
+                    </div>
+                    <div
+                      class="col m8 s12 flex--justify-center flex--align-center"
+                    >
+                      <p>
+                        O impressionante observatório de Tycho Brahe, Uraniborg,
+                        era uma construção imponente e uniforme, com um amplo
+                        pátio central. Era equipado com instrumentos
+                        astronômicos sofisticados, como dispositivos de medição
+                        de ângulos e quadrantes astronômicos, e permitia que se
+                        observasse o céu continuamente a partir de uma torre
+                        central com aberturas no teto. Abrigava não apenas áreas
+                        de observação, mas também laboratórios para experimentos
+                        alquímicos e uma biblioteca extensa sobre astronomia.
+                        Sua medição era feita com precisão e rigor, mas,
+                        infelizmente, sob o reinado de Cristiano IV em 1597, a
+                        ajuda financeira cessou, forçando Brahe a abandonar Hven
+                        e sofrer o confisco de muitos de seus instrumentos.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col m3 s3">
+                <img
+                  class="character"
+                  src="src/img/robo-calling.webp"
+                  alt="Cosmobit"
+                  loading="lazy"
+                  style="max-width: 180px !important"
+                />
+              </div>
+            </div>
+            <!-- fim linha 04 -->
+
+            <!-- linha 05 -->
+            <div class="row mt-60">
+              <div class="col m2 s2"></div>
+              <div class="col m3 s3">
+                <img
+                  class="character-flip"
+                  src="src/img/doctor-happy.webp"
+                  alt="Doutor"
+                  loading="lazy"
+                  style="max-width: 220px !important"
+                />
+              </div>
+              <div class="col m6 s6">
+                <div
+                  class="box-attention box-attention--purple-strong box-attention--bl py-16 mr-80 mt-60 mt-0-mobile mr-0-mobile"
+                >
+                  <p>
+                    Exatamente! Isso foi fundamental, já que os dados coletados
+                    por ele foram essenciais para que Johannes Kepler formulasse
+                    suas leis, que comprovaram o Heliocentrismo!
+                  </p>
+                </div>
+              </div>
+              <div class="col m1 s1"></div>
+            </div>
+            <!-- fim da linha 05 -->
+
+            <!-- row linha 06 -->
+            <div class="row mt-40 mt-40-mobile">
+              <div class="col m1 s1 mr-144 mr-0-mobile"></div>
+              <div class="col m6 s6">
+                <div
+                  class="box-attention box-attention--green box-attention--br ml-144 ml-0-mobile py-16 mt-60 mt-0-mobile"
+                >
+                  <p>Como assim? 🤯</p>
+                </div>
+              </div>
+              <div class="col m3 s3">
+                <img
+                  class="character"
+                  src="src/img/girl-running02.webp"
+                  alt="Diana"
+                  loading="lazy"
+                />
+              </div>
+            </div>
+            <!-- fim linha 06 -->
+
+            <!-- linha 07 -->
+            <div class="row mt-60">
+              <div class="col m1 s1"></div>
+              <div class="col m4 s4">
+                <img
+                  class="character"
+                  src="src/img/doctor-hunter.webp"
+                  alt="Doutor"
+                  loading="lazy"
+                  style="max-width: 350px !important"
+                />
+              </div>
+              <div class="col m6 s6">
+                <div
+                  class="box-attention box-attention--purple-strong box-attention--bl py-16 mr-80 mt-60 mt-0-mobile mr-0-mobile"
+                >
+                  <p>
+                    Tycho Brahe levou Kepler para trabalhar em seu observatório,
+                    pela sua grande habilidade matemática. Ironicamente, ele
+                    buscava que Kepler o ajudasse a comprovar a sua teoria
+                    Geocêntrica. 🤔
+                  </p>
+                </div>
+              </div>
+              <div class="col m1 s1"></div>
+            </div>
+            <!-- fim da linha 07 -->
+
+            <!-- row linha 08 -->
+            <div id="leis-de-kepler" class="row mt-60 mt-60-mobile">
+              <div class="col m3 s3">
+                <img
+                  class="character"
+                  src="src/img/cosmobit-running.webp"
+                  alt="Cosmobit"
+                  loading="lazy"
+                  style="max-width: 220px !important"
+                />
+              </div>
+              <div class="col m9 s9">
+                <div
+                  class="box-attention box-attention box-attention--bl py-8 mr-80 mr-0-mobile"
+                >
+                  <div class="row">
+                    <div
+                      class="col m4 s12 flex--justify-center flex--align-center"
+                    >
+                      <img
+                        src="src/img/kepler-1.png"
+                        alt="Kepler"
+                        loading="lazy"
+                        class="img--round"
+                      />
+                    </div>
+                    <div
+                      class="col m8 s12 flex--justify-center flex--align-center"
+                    >
+                      <p>
+                        <br />
+                        Mas, com os dados precisos de Tycho Brahe, Kepler
+                        Enunciou 3 leis que foram essenciais para que o
+                        Heliocentrismo fosse aceito.<br />&nbsp;
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- fim linha 08 -->
+
+            <!-- linha 09 -->
+            <div class="row">
+              <div class="col m3 s3"></div>
+              <div class="col m6 s6">
+                <div
+                  class="box-attention box-attention--green box-attention--tr py-16 ml-80 mt-40 mt-20-mobile ml-0-mobile"
+                >
+                  <p>Vamos conhecê-las? 😱.</p>
+                </div>
+              </div>
+              <div class="col m3 s3 mt-40 mt-20-mobile">
+                <img
+                  class="character"
+                  src="src/img/girl-posing3.webp"
+                  alt="Diana"
+                  loading="lazy"
+                  style="max-width: 240px !important"
+                />
+              </div>
+            </div>
+            <!-- fim da linha 09 -->
+          </div>
+
+          <img
+            src="src/img/Section-wave-05.svg"
+            style="width: 100%; margin-bottom: -1px"
+            alt="Onda"
+          />
+        </div>
+        <!-- Fim Game -------------------------------------->
+
+        <!-- carrousel ------------------------------------>
+        <div class="pt-60">
+          <div class="container--medium mb-60">
+            <carousel></carousel>
+          </div>
+        </div>
+        <!-- Fim carrousel --------------------------------->
+
+        <!-- movimentos lunar --------------------------------------->
+        <div id="video" class="container mb-80">
+          <div id="modelo" class="row scene-bg">
+            <div class="col m1 s1"></div>
+            <div
+              class="col m6 s6 py-24 flex--align-center flex--justify-center"
+            >
+              <div
+                class="py-24 box-attention box-attention--purple-strong box-attention--tr mr-24-mobile ml-24-mobile"
+              >
+                <p class="white-text">Sim, exatamente! 🤩</p>
+                <p class="white-text">
+                  <b> Esse vídeo explica bem isso, vamos assisti-lo.</b>
+                </p>
+              </div>
+            </div>
+            <div
+              class="col m3 s3 pt-40 pb-24 ml-60 ml-0-mobile flex--align-center flex--justify-center"
+            >
+              <img
+                src="src/img/doctor-ok.webp"
+                class="character"
+                alt="Doutor"
+                loading="lazy"
+                style="width: 100%; max-width: 150px !important"
+              />
+            </div>
+
+            <div class="col m2 s2"></div>
+          </div>
+        </div>
+
+        <!-- Fim movimentos lunar -------------------------------------->
+
+        <!-- youtube --------------------------------------->
+        <div class="green-bg">
+          <img
+            src="src/img/Section-curve.svg"
+            style="width: 100%; margin-top: -3px; z-index: 3"
+            alt="Onda"
+          />
+          <div class="container--medium pt-80" style="margin-top: -150px">
+            <div class="row">
+              <div class="col m12 s12">
+                <iframe
+                  style="width: 100%"
+                  height="439"
+                  src="https://www.youtube.com/embed/iEr39Gg4VcQ?si=fkkvLm39lMtiSiIk"
+                  title="YouTube video player"
+                  frameborder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  referrerpolicy="strict-origin-when-cross-origin"
+                  allowfullscreen
+                ></iframe>
+              </div>
+            </div>
+          </div>
+          <div class="container--medium py-40 mb-0-mobile">
+            <div class="row pb-60">
+              <div class="col m4 s4">
+                <img
+                  class="character"
+                  src="src/img/cosmobit-calling2.webp"
+                  alt="Cosmobit"
+                  loading="lazy"
+                  style="max-width: 220px !important"
+                />
+              </div>
+              <div
+                class="col m8 s8 flex--align-center flex--justify-center mt-24"
+              >
+                <ul class="collapsible expansable">
+                  <li>
+                    <div class="collapsible-header">
+                      <p>
+                        <b>📝 Questão 1</b>
+                      </p>
+                    </div>
+                    <div class="collapsible-body">
+                      <p>
+                        &bull; Qual foi a observação revolucionária feita por
+                        Nicolau Copérnico em 1541 e como ela impactou a visão da
+                        astronomia na época?
+                      </p>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="collapsible-header">
+                      <p><b>📝 Questão 2</b></p>
+                    </div>
+                    <div class="collapsible-body">
+                      <p>
+                        &bull; Como a descoberta de Kepler sobre as órbitas
+                        planetárias contribuiu para a compreensão dos movimentos
+                        dos planetas ao redor do Sol?
+                      </p>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="collapsible-header">
+                      <p><b>📝 Questão 3</b></p>
+                    </div>
+                    <div class="collapsible-body">
+                      <p>
+                        &bull; Por que os planetas não colidem com o Sol, mesmo
+                        sendo atraídos por sua gravidade? Explique como os
+                        conceitos de periélio e afélio influenciam a velocidade
+                        dos planetas durante suas órbitas.
+                      </p>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Fim youtube ---------------------------------->
+
+        <div class="game-story game-story--scene02">
+          <img
+            src="src/img/Section-wave-green-i.svg"
+            style="width: 100%; margin-top: -3px; z-index: 3"
+            alt="Onda"
+          />
+          <div id="resumo" class="container game-content">
+            <!-- row influencia da lua 01 -->
+            <div class="row pt-80 mt-20-mobile">
+              <div class="col m3 s3">
+                <img
+                  class="character-flip"
+                  src="src/img/girl-running02.webp"
+                  alt="Diana"
+                  loading="lazy"
+                  style="max-width: 240px !important"
+                />
+              </div>
+
+              <div class="col m6 s9">
+                <div
+                  class="box-attention box-attention--green box-attention--bl py-16 mt-60 mt-0-mobile"
+                >
+                  <p>
+                    Então as observações de Tycho Brahe, associadas à capacidade
+                    matemática de Kepler, foram essenciais para a
+                    <span class="purple-text"
+                      ><b>queda do geocentrismo!</b></span
+                    >
+                  </p>
+                </div>
+              </div>
+              <div class="col m2 s12"></div>
+            </div>
+            <!-- fim influencia da lua 01 -->
+
+            <!-- row influencia da lua 02 -->
+            <div class="row mt-24-mobile">
+              <div class="col m2 s12"></div>
+              <div class="col m6 s9">
+                <div
+                  class="box-attention box-attention--purple-strong box-attention--br py-16 mt-80 mt-0-mobile"
+                >
+                  <p>
+                    Sim! Perceba que naquele momento existia uma disputa entre
+                    as ideias geocentrismo e heliocentrismo.
+                  </p>
+
+                  <p>
+                    <b
+                      >Assim, ao demonstrar matematicamente suas leis, Kepler
+                      acabou por contribuir para a resolução dessa discussão.</b
+                    >
+                    ✅
+                  </p>
+                </div>
+              </div>
+              <div class="col m3 s3 mb-60">
+                <img
+                  class="character-flip"
+                  src="src/img/doctor-dancing.webp"
+                  alt="Doutor"
+                  loading="lazy"
+                  style="max-width: 320px !important"
+                />
+              </div>
+            </div>
+            <!-- fim influencia da lua 02 -->
+
+            <!-- row influencia da lua 03 -->
+            <div class="row mt-80-mobile">
+              <div class="col m3 s3">
+                <img
+                  class="character-flip"
+                  src="src/img/girl-posing2.webp"
+                  alt="Diana"
+                  loading="lazy"
+                  style="max-width: 240px !important"
+                />
+              </div>
+
+              <div class="col m6 s9">
+                <div
+                  class="box-attention box-attention--green box-attention--bl py-16 mt-60 mt-0-mobile"
+                >
+                  <p>A Ciência é mesmo maravilhosa! 🥰</p>
+                </div>
+              </div>
+              <div class="col m2 s12"></div>
+            </div>
+            <!-- fim influencia da lua 03 -->
+
+            <!-- Relatório -->
+            <div id="relatorio" class="container game-content">
+              <div class="row py-60">
+                <div class="col m12 s12 center-align">
+                  <h3 class="mb-40 green-text center-align" data-aos="zoom-in">
+                    Relatório da Missão
+                  </h3>
+                  <p class="white-text center-align">
+                    <b>Hoje, nós:</b>
+                  </p>
+
+                  <p class="white-text">
+                    👉 Conhecemos as Leis de Kepler;
+                    <br />👉 Compreendemos como os dados de Tycho Brahe
+                    contribuíram <br />para as formulações das leis de Kepler;
+                    <br />👉Percebemos que essa descoberta ajudou a reforçar a
+                    <br />teoria heliocêntrica.
+                  </p>
+                </div>
+              </div>
+              <div class="row pb-80 mt-80-mobile">
+                <div class="col m12 s12 center-align">
+                  <img
+                    class="character"
+                    src="src/img/boy-ok.webp"
+                    alt="Luki"
+                    loading="lazy"
+                    style="max-width: 200px !important"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- fim do relatório -->
+
+        <!-- Proxima Aula ---------------------------------->
+        <div id="proxima" class="game-ending" style="margin-bottom: -25px">
+          <div
+            class="container--medium center-align flex--align-center flex--column py-80"
+          >
+            <div style="max-width: 620px">
+              <h3 class="mb-40 green-text center-align" data-aos="zoom-in">
+                A Jornada Continua...
+              </h3>
+              <p class="body1 white-text">
+                <b>O próximo destino é: “Gravidade: o que é isso?”</b>
+              </p>
+              <p class="white-text">
+                Vamos entender como a Lei da gravitação Universal foi capaz de
+                explicar o movimento que Kepler modelou matematicamente.
+              </p>
+            </div>
+
+            <!-- Concluir ---------------------------------->
+            <concluir></concluir>
+          </div>
+        </div>
+        <!-- Fim Proxima Aula ------------------------------>
+
+        <!-- Footer ---------------------------------- -->
+
+        <app-footer></app-footer>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,30 @@
+#hero {
+  background-color: var(--md-sys-color-surface);
+
+  background-position: center 50%;
+  background-size: cover;
+  height: 60vh;
+  min-height: 400px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  @include mobile {
+    // background-image: url("../img/Hero-s.webp");
+    background-image: linear-gradient(rgba(209, 54, 49, 0), rgba(87, 87, 227, 0.9)),
+      url("../img/Hero-s.webp");
+  }
+  @include tablet {
+    height: 80vh;
+
+  }
+  @include tablet-only {
+    color: red;
+    background-image: linear-gradient(rgba(209, 54, 49, 0), rgba(87, 87, 227, 0.9)),
+      url("../img/Hero-m.webp");
+  }
+  @include desktop {
+    // background-image: url("../img/Hero.webp");
+    background-image: linear-gradient(rgba(209, 54, 49, 0), rgba(87, 87, 227, 0.9)),
+      url("../img/Hero.webp");
+  }
+}
